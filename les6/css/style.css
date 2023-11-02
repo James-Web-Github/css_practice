@@ -1,0 +1,30 @@
+/* css absolute length unit */
+/* rem瀏覽器預設倍數 預設16px */
+/* em 參考父原素大小再成em倍數 */
+/* ch為字元數 */
+/*html語法 p*10>lorem 創造10行p 有lorem*/
+/* 盡量不使用vh */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+}
+h1 {
+    border: 2px dashed red;
+    width: 50%;
+    padding: 0.5em;
+    font-size: 3rem;
+}
+
+main{
+    font-size: 2rem;
+}
+p{
+    font-size: 1rem;
+    width: 40ch;
+}
