@@ -4,27 +4,25 @@
 /* ch為字元數 */
 /*html語法 p*10>lorem 創造10行p 有lorem*/
 /* 盡量不使用vh */
+/* 每個元素有自己的預設設定 所以才要用* {} 消除方便管理 */
+/* box sizing 如果是box content 你的width 設定就只會在內容方塊  box-border就會加上 padding border*/
+/* em 也可以受font size影響 */
 
+/* (上) (左右) (下) */
+/* (上) (又） （下) (左) */
+/* (上下) (左右) */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-}
-h1 {
+
+.container {
     border: 2px dashed red;
-    width: 50%;
-    padding: 0.5em;
-    font-size: 3rem;
+    margin: 1.5rem;
+    /* width: 400px; */
+    font-size: 1.5em;
+    padding: 1.5em;/*對應html預設為父元素預設16px*/
 }
 
-main{
-    font-size: 2rem;
-}
-p{
-    font-size: 1rem;
-    width: 40ch;
-}
