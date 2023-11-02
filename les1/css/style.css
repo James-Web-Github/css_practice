@@ -1,0 +1,25 @@
+/* css 下方覆蓋上方 */
+/* id class css屬性...執行權優 於 元素種類<p>... */
+/* !important 可無視規則使用*/
+* {
+    font-family: monospace;
+}
+
+body {
+    font-size: 64px;
+
+}
+
+
+main{
+    font-family: monospace;
+    color: blue;
+}
+p {
+    color: aqua!important;
+    font-size: 64px;
+
+}
+p{
+    color: brown;
+}
