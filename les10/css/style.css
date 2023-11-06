@@ -1,0 +1,49 @@
+/* margin 之間的空格是可以被重疊的*/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+
+p {
+  background-color: lightgray;
+}
+
+.opposite {
+  background-color: black;
+  color: whitesmoke;
+  /* margin-top: 100px; inline element 不能被調整margin height 
+  padding可以但會超出父元素  解決這問題要改成inline block 他就會隨padding大小改變 margin也有效 但就是會變大*/
+}
+/* margin-inline 只會動左右 */
+ul {
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: black;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  margin-inline:0.5rem ;
+}
+
+li a {
+  color: white;
+  text-decoration: none;
+}
+li a:hover,li a:focus {
+  text-decoration: underline;
+}

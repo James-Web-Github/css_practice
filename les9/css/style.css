@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+body {
+    margin: 0.5rem;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+nav {
+    border: 2px solid #333;
+    border-radius: 2rem;
+    margin: 0 auto 1rem;
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 7rem;
+}
+
+h2 {
+    padding: 1rem;
+    background-color: gold;
+    /* 左上、右上、右下、左下。 */
+    border-radius: 2rem 2rem 0 0;
+}
+
+ul {
+    /* ui都會有的標題符號點 把它消除 */
+    list-style-type: none;
+}
+
+li {
+    border-top: 1px solid #333;
+}
+
+li a {
+    display: block;
+    /* 他的預設是inline block的width是100% 因此使用滑鼠變色的功能就不會只有變文字的顏色 */
+}
+
+li a,li a:visited {
+    text-decoration: none;
+    color: #333;
+}
+
+li a:hover {
+    background-color: #333;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+li:last-child a {
+    border-radius: 0 0 2rem 2rem;
+}
