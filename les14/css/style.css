@@ -1,6 +1,73 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+/* display: flex;
+  justify-content: flex-end靠右 flex-start靠左;
+  space-between 只有中間有空隙 ,space-arround 最外圍會有空隙 space-evenly頭尾都有空隙 空隙大小取決父-子剩下的px
+  gap: 1rem  空隙
+  
+  当父元素使用 display: flex; 进行布局时，子元素的高度通常会受到父元素的高度和 flex 布局规则的影响。如果子元素的高度没有特别设置，它们的高度通常会随着父元素的高度而自动调整。
+  Notice that when the flex direction is a column, justify-content changes to the vertical and align-items to the horizontal.
+  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  min-height: 100vh;
+  padding: 20px;
 }
+
+.container {
+  max-width: 800px;
+  min-height: 400px;
+  margin-inline: auto;
+  border: 1px solid #000;
+  display: flex;
+  /* justify-content 是用于控制子元素在 flex 容器内水平方向上的对齐方式的 CSS 属性 */
+  justify-content:
+   /* space-between; */
+   space-evenly;
+  /* gap: 1rem; */
+  /* align-items: flex-end; */
+  /* align-items: flex-start; */
+  /*align-items: center; 是用于在 flex 容器中垂直居中子元素的属性 */
+  align-items: center;
+  /* flex-direction: row-reverse; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap;超出範圍時是否換行的屬性，分為換行、不換行、換行時反轉。預設nowrap */
+  /* 這僅僅是 flex-direction 與 flex-wrap 的縮寫，所以只要在這前後帶上相對應的值即可。    flex-flow: <'flex-direction'> || <'flex-wrap'>*/
+  flex-flow: row wrap;
+  /* align-content row 版的 justify-content, */
+  /* align-content: space-evenly; */
+  /* align-content: space-around; */
+  
+} 
+
+.box {
+  /* min-width: 100px; */
+  /* min-height: 100px; */
+  height: 100px;
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  /* align-items 和 align-content 是用于控制 flex 容器中子元素在垂直方向上的对齐方式的两个不同的 CSS 属性 */
+  align-items: center;
+  /* align-content它在容器内有多个行或列时才有效，而对于只有一个行或列的情况，它不会产生明显效果。 */
+  /* align-content: center; */
+
+
+
+}
+/* flex: 1 1 150px */
+/* 還有一些flex的項目比較複雜 目前推估用不到 暫且不學 */
+/* .box:nth-child(2) {
+  flex: 2 2 150px;
+  order: 1; */
+/* } */
