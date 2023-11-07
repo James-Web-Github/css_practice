@@ -1,6 +1,92 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  min-height: 100vh;
+  display: grid;
+  /* 九行 */
+  grid-template-columns: repeat(9,1fr);
+  /* 3排 */
+  grid-auto-rows: 75px auto 75px;
+  grid-template-areas: 
+   "hd hd hd hd hd hd hd hd hd"
+   "mn mn mn mn mn mn sd sd sd"
+   "ft ft ft ft ft ft ft ft ft";
+   gap: 1rem;
+}
+
+.el {
+  background-color: rebeccapurple;
+  color: #fff;
+  display: grid;
+  place-content: center;
+}
+
+header {
+  grid-area: hd;
+}
+
+.sidebar {
+  grid-area: sd;
+}
+
+footer {
+  grid-area: ft;
+}
+
+
+
+.container {
+  display: grid;
+  grid-area: mn;
+  /* 全部橫排 */
+  /* grid-auto-flow: column; */
+  /* 一行最多三個，不夠位置往下排 按照設定大小 */
+  /* grid-template-columns: 200px 100px 200px; 
+                            2fr 1fr 1fr平均分配 並安排分量 2分 1分 1分 也混px*/
+  /* grid-template-columns: repeat(4,1fr); */
+  grid-template-columns: repeat(2,1fr 2fr);
+  /* repeat(2, 1fr,2fr) => - -- - --
+                           - --  */
+  /* 相當於高度 不會低於150px 會跟著變長 */
+  grid-auto-rows: minmax(150px, auto);
+  /* row之間空隙 row column*/
+  /* row-gap: 1em; */
+  /* column-gap: 1em; */
+  gap: 1em 0.5em;
+
+}
+
+.box {
+  background-color: #000;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+.box:first-child {
+  background-color: blue;
+ /* 數字代表格線數量 至Layout開啟 main-grid查看 */
+  /* grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3; */
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 1/3;
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* 縮寫 align content   justify-content*/
+  place-content: center center;
+}
+.box:nth-child(2) {
+  background-color: purple;
+  grid-column: 1/5;
+  grid-row: 3/4;
 }
