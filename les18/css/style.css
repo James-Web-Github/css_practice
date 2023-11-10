@@ -113,52 +113,79 @@ footer {
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
-  body {
-    background-color: green;
-    background-image: radial-gradient(whitesmoke, green);
+  main {
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
   }
-  nav {
-    display: none;
+  .card {
+    width: min(100%,400px);
+  }
+  .card:last-child {
+    order: -1;
   }
 }
 
 /* || MEDIUM */
 @media screen and (min-width: 768px) {
-  body {
-    background-color: gold;
-    background-image: radial-gradient(whitesmoke, gold);
+  nav {
+    display: none;
   }
+  .card {
+    width: min(100%,325px);
+  }
+  .card figure {
+    flex-flow:  column-reverse;
+  }
+  .card figcaption {
+    margin: 0.1em 0;
+  }
+  .card p {
+    margin-top: 1rem;
+  }
+
 }
 
 /* || LARGE */
 @media screen and (min-width: 992px) {
-  body {
-    background-color: firebrick;
-    background-image: radial-gradient(whitesmoke, firebrick);
+  .card {
+    width: min(100%,400px);
+  }
+  .card:nth-child(2) {
+    order: -1;
   }
 }
 
 /* || XL  */
 @media screen and (min-width: 1200px) {
-  body {
-    background-color: rebeccapurple;
-    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  .card {
+    width: min(calc(33% -1rem),500px)
   }
 }
 
 /* || MOBILE DEVICE LANDSCAPE  */
+/* (max-height: 425px) 表示當螢幕高度不超過 425 像素時應用這個樣式。
+(min-aspect-ratio: 7/4) 表示當螢幕的寬高比（寬度除以高度）不小於 7:4 時應用這個樣式 */
 @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-  body {
-    background-color: dodgerblue;
-    background-image: radial-gradient(whitesmoke, dodgerblue);
-  }
-
-  h1,
-  h2 {
+  h1 {
     font-size: 1.5rem;
   }
 
   nav {
     display: none;
   }
+
+  main {
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    /* align-items: stretch 預設值，將內容元素撐開至 flexbox 大小  但顯示看不出來拉 css格線看的到 */
+    /* align-items: stretch; */
+  }
+  .card {
+    width: min(calc(33%-0.25rem),200px);
+  }
+  .card figcaption,.card p {
+    font-size: 1.25rem;
+  }
+
 }
